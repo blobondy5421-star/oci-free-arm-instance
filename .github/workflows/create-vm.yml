@@ -1,8 +1,8 @@
 name: Try to Create OCI VM
-# It will run every 3 minutes.
+# It will run every 1 minute.
 on:
   schedule:
-    - cron: "*/3 * * * *"
+    - cron: "*/1 * * * *"
   # Allows you to manually run this workflow from the Actions tab
   workflow_dispatch:
 env:
