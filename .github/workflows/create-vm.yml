@@ -51,6 +51,8 @@ jobs:
           echo "region=${{ env.OCI_CLI_REGION }}" >> ~/.oci/config
           echo "${{ secrets.SSH_PUBLIC_KEY }}" > /home/runner/my_ssh_key.pub
 
+          export SUPPRESS_LABEL_WARNING=True
+
           # Run the command, capture ALL output, and use '|| true' to prevent the script from exiting early.
           OCI_OUTPUT=$(oci compute instance launch \
             --compartment-id "$COMPARTMENT_ID" \
